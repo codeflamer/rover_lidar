@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rover_lidar">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00130991626705053 3.49863639634E-08 -0.00547333121816359"
+        rpy="0 0 0" />
+      <mass
+        value="0.84121706270277" />
+      <inertia
+        ixx="0.000471900739611814"
+        ixy="-2.09182785151114E-08"
+        ixz="-1.51956152423411E-05"
+        iyy="0.00136894339262334"
+        iyz="7.11926294463084E-07"
+        izz="0.00158904161906431" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="-8.80747905163126E-12 -4.55740861715626E-11 -0.018857267595084"
+        rpy="0 0 0" />
+      <mass
+        value="0.0169810669319342" />
+      <inertia
+        ixx="6.69284229296301E-06"
+        ixy="-1.60145736496364E-14"
+        ixz="-3.42445131611552E-14"
+        iyy="6.69284232761491E-06"
+        iyz="6.23321768620798E-15"
+        izz="9.06807752001078E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/front_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_to_front_right_wheel"
+    type="continuous">
+    <origin
+      xyz="0.117290515707591 -0.127 -0.025435192502925"
+      rpy="1.5707963267949 -1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_wheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="-3.26679655549E-11 -3.29753273298206E-11 -0.018857267595084"
+        rpy="0 0 0" />
+      <mass
+        value="0.0169810669319342" />
+      <inertia
+        ixx="6.69284228887819E-06"
+        ixy="9.91131187039994E-15"
+        ixz="-2.49917727791211E-14"
+        iyy="6.69284233169973E-06"
+        iyz="2.42270679512842E-14"
+        izz="9.06807752001078E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/front_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/front_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_to_front_left_wheel"
+    type="continuous">
+    <origin
+      xyz="0.1188588681311 0.127 -0.019031967432299"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_wheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="bottom_right_wheel">
+    <inertial>
+      <origin
+        xyz="2.91839330479604E-11 -3.60952205624709E-11 -0.018857267595084"
+        rpy="0 0 0" />
+      <mass
+        value="0.0169810669319343" />
+      <inertia
+        ixx="6.69284232901609E-06"
+        ixy="-1.43509531578498E-14"
+        ixz="-2.68277877855762E-14"
+        iyy="6.69284229156184E-06"
+        iyz="-2.21767763622839E-14"
+        izz="9.06807752001078E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/bottom_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/bottom_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_bottom_right_wheel"
+    type="continuous">
+    <origin
+      xyz="-0.113531519133702 -0.127 -0.029415678198117"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bottom_right_wheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="bottom_left_wheel">
+    <inertial>
+      <origin
+        xyz="-1.02048924865983E-11 4.52816482227059E-11 -0.018857267595084"
+        rpy="0 0 0" />
+      <mass
+        value="0.0169810669319342" />
+      <inertia
+        ixx="6.69284231029886E-06"
+        ixy="-2.35935358805743E-14"
+        ixz="3.38705121898742E-14"
+        iyy="6.69284231027906E-06"
+        iyz="8.02048066322904E-15"
+        izz="9.06807752001078E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/bottom_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/bottom_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_to_bottom_left_wheel"
+    type="continuous">
+    <origin
+      xyz="-0.115435440029406 0.127 -0.023104093147408"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="bottom_left_wheel" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right_tread">
+    <inertial>
+      <origin
+        xyz="-0.00948575511995705 -0.0271678464476261 -1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0467186064325547" />
+      <inertia
+        ixx="5.36340024147205E-06"
+        ixy="-8.04600395062877E-10"
+        ixz="1.92734666229232E-23"
+        iyy="5.40913175843456E-06"
+        iyz="-4.87566527484439E-22"
+        izz="1.12903298878672E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/right_tread.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/right_tread.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_right_tread"
+    type="fixed">
+    <origin
+      xyz="0.00929378954049227 -0.1065 -0.000296284357995884"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_tread" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_tread">
+    <inertial>
+      <origin
+        xyz="0.00948575511995705 -0.0271678464476261 -4.16333634234434E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0467186064325548" />
+      <inertia
+        ixx="5.36340024147206E-06"
+        ixy="8.04600395063005E-10"
+        ixz="2.06402228351984E-22"
+        iyy="5.40913175843456E-06"
+        iyz="6.33254843981324E-22"
+        izz="1.12903298878674E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/left_tread.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/left_tread.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_to_left_tread"
+    type="fixed">
+    <origin
+      xyz="0.010862 0.1065 0.0061069"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_tread" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_link">
+    <inertial>
+      <origin
+        xyz="0.0342711008636539 -1.09110936952957E-05 0.0671302930888121"
+        rpy="0 0 0" />
+      <mass
+        value="0.094104181491117" />
+      <inertia
+        ixx="2.79092002947982E-05"
+        ixy="-5.25179740283954E-08"
+        ixz="3.35338205540781E-07"
+        iyy="4.43526960767174E-05"
+        iyz="-2.48732605041911E-08"
+        izz="6.94753918494139E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/lidar_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_lidar/meshes/lidar_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_to_lidar_link"
+    type="fixed">
+    <origin
+      xyz="0.0011557 0 -0.008"
+      rpy="0 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
