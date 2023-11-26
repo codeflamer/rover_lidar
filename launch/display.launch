@@ -3,7 +3,7 @@
     name="model" />
   <param
     name="robot_description"
-    textfile="$(find rover_lidar)/urdf/rover_lidar.urdf" />
+    textfile="$(find updated_robot_lidar)/urdf/updated_robot_lidar.urdf" />
   <node
     name="joint_state_publisher_gui"
     pkg="joint_state_publisher_gui"
@@ -16,5 +16,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find rover_lidar)/urdf.rviz" />
+    args="-d $(find updated_robot_lidar)/urdf.rviz" />
 </launch>
